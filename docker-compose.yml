@@ -10,9 +10,13 @@ services:
     networks:
       - shared-net
   mongo-seed:
-    build: ./mongo-seed
+    image: mongo:3.2.6
     links:
       - mongodb
+    volumes:
+      - ./mongo-seed:/mongo-seed
+    command:
+      /mongo-seed/import.sh
     networks:
       - shared-net
   backend:
@@ -22,7 +26,7 @@ services:
     links:
       - mongodb
     depends_on:
-      - mongodb
+      - "mongodb"
     networks:
       - shared-net
   frontend:
