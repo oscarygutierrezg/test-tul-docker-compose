@@ -16,7 +16,7 @@ services:
     networks:
       - shared-net
   backend:
-    image: backend
+    image:  "oscarygutierrezg/test-walmart-back"
     ports:
       - "8081:8080"
     links:
@@ -26,7 +26,7 @@ services:
     networks:
       - shared-net
   frontend:
-    image: frontend
+    image: "oscarygutierrezg/test-walmart-front"
     ports:
       - "80:80"
     links:
