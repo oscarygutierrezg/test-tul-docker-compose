@@ -10,5 +10,5 @@ Para levantar todo el stack
 ```sh
 $ docker-compose up
 ```
-En cualquier navegador abrir el siguiente link http://localhost:8080
+En cualquier navegador abrir el siguiente link http://localhost:8090
 
