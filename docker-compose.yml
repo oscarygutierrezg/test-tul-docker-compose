@@ -10,7 +10,7 @@ services:
     networks:
       - shared-net
   mongo-seed:
-    image: mongo:3.2.6
+    image: mongo
     links:
       - mongodb
     volumes:
